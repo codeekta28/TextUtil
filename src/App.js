@@ -1,10 +1,9 @@
 import './App.css'
 import react, { useState } from 'react'
 import Navbar from './components/Navbar'
-import About from './components/About'
 import TextForm from './components/TextForm'
 import Alert from './components/Alert'
-import { Routes, Route, Link } from 'react-router-dom'
+// import { Routes, Route, Link } from 'react-router-dom'
 
 function App () {
   const [mode, setMode] = useState('light')
@@ -82,20 +81,13 @@ function App () {
         showDarkModeColor={showDarkModeColor}
       />
       <Alert showAlert={alert} />
-      <Routes>
-        <Route exact path='about' element={<About mode={mode} darkModeColor={darkModeColor} />} />
-        <Route exact
-          path='/'
-          element={
-            <TextForm
+      <TextForm
               heading={'Enter Your text below to analyze '}
               mode={mode}
               showAlert={showAlert}
               darkModeColor={darkModeColor}
             />
-          }
-        />
-      </Routes>
+
     </>
   )
 }
