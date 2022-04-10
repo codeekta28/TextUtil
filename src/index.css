@@ -2,4 +2,7 @@
     height:100vh;
     overflow: hidden;
 }
+.accordion-button::after{
+    filter:invert(1)
+}
 
